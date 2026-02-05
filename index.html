@@ -640,7 +640,22 @@ box-shadow:0 12px 30px rgba(34,211,238,.45);
 }
 /* MOBILE FIX */
 @media (max-width: 768px) {
-    .hero-content{
+    html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.hero-content {
+  margin: 0 auto !important;
+  padding: 0 15px !important;
+}
+
+.background-squares {
+  display: none !important;
+}
+
+.hero-content {
     flex-direction: column;
     align-items: center;
     text-align:center;
