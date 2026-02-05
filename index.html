@@ -26,6 +26,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(135deg, #0b4f6c, #00a8a8);
   color: #fff;
+  overflow-x: hidden;
 }
 
 /* HERO */
@@ -634,6 +635,24 @@ box-shadow:0 12px 30px rgba(34,211,238,.45);
 .reveal.active{
     opacity:1;
     transform: translateY(0);
+}
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
 }
 </style>
 </head>
