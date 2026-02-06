@@ -389,7 +389,7 @@ body {
 .tools-section{
 margin-top:80px;
 text-align:center;
-transform:none;
+transform:translateX(80px);
 }
 
 .tools-grid{
@@ -663,68 +663,67 @@ box-shadow:0 12px 30px rgba(34,211,238,.45);
     opacity:1;
     transform: translateY(0);
 }
-/* MOBILE FIX CLEAN */
-@media (max-width:768px){
+/* MOBILE FIX */
+@media (max-width:768px) {
 
-  html,body{
-    width:100%;
-    overflow-x:hidden;
+  html, body {
+    width: 100% important;
+    overflow-x: hidden !important;
   }
 
-  .hero{
-    padding:60px 14px !important;
+ .hero-content{
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  transform:none !important;
+  width:100% !important;
+  max-width:100% !important;
+  padding:0 14px !important;
+  box-sizing:border-box !important;
+}
+
+  .tools-section {
+    transform: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
   }
 
-  .hero-content{
-    position:static !important;
-    transform:none !important;
-    width:100% !important;
-    max-width:100% !important;
-    margin:0 auto !important;
-
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center !important;
-    text-align:center !important;
-  }
-
-  .tools-section{
-    transform:none !important;
-    width:100% !important;
-    margin-left:0 !important;
-  }
-
-  .tools-grid{
-    grid-template-columns:1fr !important;
+  .tools-grid {
+    grid-template-columns: 1fr !important;
   }
 
   .tool-card,
-  .card{
-    width:100% !important;
-    max-width:100% !important;
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
-  .cards{
-    flex-direction:column !important;
-    align-items:center !important;
+  .cards {
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   .live-status,
-  .background-squares{
-    display:none !important;
+  .background-squares {
+    display: none !important;
   }
-
   .hero h1{
-    font-size:32px !important;
-    line-height:1.2 !important;
-    padding:0 12px !important;
-  }
-
-  .hero p{
-    font-size:15px !important;
-    padding:0 12px !important;
-  }
+  font-size:34px !important;
+  line-height:1.2 !important;
+  padding:0 12px !important;
 }
+
+.hero p{
+  font-size:15px !important;
+  padding:0 12px !important;
+}
+
+.hero{
+  padding:60px 12px !important;
+}
+
+}
+
 </style>
 </head>
 
@@ -960,7 +959,5 @@ window.addEventListener("scroll", function(){
 </script>
 </body>
 </html>
-
-
 
 
