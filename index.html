@@ -643,10 +643,17 @@ box-shadow:0 12px 30px rgba(34,211,238,.45);
 }
 /* MOBILE FIX */
 @media (max-width: 768px) {
- 
+ .tools-section {
+  transform: translateX(0) !important;
+}
+.tools-grid {
+  grid-template-columns: 1fr !important;
+}
+
 .hero-content {
   margin: 0 auto !important;
   padding: 0 15px !important;
+
 }
 
 .background-squares {
@@ -921,4 +928,3 @@ window.addEventListener("scroll", function(){
 </script>
 </body>
 </html>
-
