@@ -169,8 +169,9 @@ body {
 /* === FADE UP ANIMATION (VIDLJIVO) === */
 .fade-up {
   opacity: 0;
-  transform: translateY(60px);
+  transform: translateY(0);
   animation: fadeUp 1.6s ease-out forwards;
+  will-change: opacity;
 }
 
 .delay-1 { animation-delay: 0.5s; }
