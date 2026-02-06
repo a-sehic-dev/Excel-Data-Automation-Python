@@ -32,7 +32,7 @@
 <meta property="og:locale" content="en_US">
 <meta name="twitter:title" content="Python Automation Developer">
 <meta name="twitter:description" content="Custom Python automation, Excel tools and workflow automation services.">
-<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+
 <style>
 * {
   margin: 0;
@@ -42,6 +42,8 @@
 }
 html, body {
   max-width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 body {
     min-height: 100vh;
@@ -665,6 +667,7 @@ box-shadow:0 12px 30px rgba(34,211,238,.45);
 @media (max-width:768px) {
 
   html, body {
+    width: 100% important;
     overflow-x: hidden !important;
   }
 
@@ -704,6 +707,7 @@ box-shadow:0 12px 30px rgba(34,211,238,.45);
   }
 
 }
+
 </style>
 </head>
 
@@ -802,13 +806,12 @@ rel="noopener">
 <div class="tool-card">
 <h3>💼 Fiverr Services</h3>
 <p>Order custom Python automation, scraping and AI tools.</p>
-<p style="opacity:0.85;margin-bottom:14px;">
-Trusted by clients on Fiverr and Upwork – custom Python automation & data tools.
-</p>
+
 <a href="https://www.fiverr.com/sedinsehic"
 target="_blank"
 rel="noopener"
 class="tool-btn">
+onclick="gtag('event','click_fiverr',{event_category:'outbound',event_label:'fiverr_button'});">
 ⭐ Hire me on Fiverr
 </a>
 </div>
@@ -821,6 +824,7 @@ class="tool-btn">
 target="_blank"
 rel="noopener"
 class="tool-btn">
+onclick="gtag('event','click_upwork',{event_category:'outbound',event_label:'upwork_button'});">
 🔥 Hire me on Upwork
 </a>
 </div>
