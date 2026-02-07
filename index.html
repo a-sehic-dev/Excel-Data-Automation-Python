@@ -710,7 +710,6 @@ max-width:100% !important;
     margin-left:auto;
     margin-right:auto;
     width:100%;
-    transform: translateX(-40px);
 }
   .tools-section {
     transform: none !important;
@@ -720,13 +719,14 @@ max-width:100% !important;
   }
 
   .tools-grid {
-    grid-template-columns: 1fr !important;
+    display:flex !important;
+    justify-content:center !important;
   }
 
   .tool-card,
   .card {
-    width: 100% !important;
-    max-width: 100% !important;
+    width: auto !important;
+    max-width: 320px !important;
   }
 
   .cards {
@@ -831,7 +831,7 @@ Send your Excel file → Get it automated
 
 <section class="tools-section">
 
-<h2 class="fade-up">Automation Tools</h2>
+<h2>Automation Tools</h2>
 
 <div class="tools-grid">
 <div class="tool-card featured hot">
