@@ -753,10 +753,12 @@ max-width:100% !important;
     align-items: center !important;
 }
 
-.hero-left,
-.hero-right {
-    width: 100% !important;
-    max-width: 100% !important;
+.hero {
+display:flex !important;
+flex-direction: column !important;
+align-items: center !important;
+grid-template-columns:none !important;
+gap:20px !important;
 }
 
 .hero{
@@ -764,7 +766,20 @@ max-width:100% !important;
 }
 
 }
+.hero-fill{
+    display:flex !important;
+    justify-content:center !important;
+}
 
+.fill-card{
+    width:100% !important;
+    max-width:320px !important;
+}
+
+.cta-btn{
+    width:100% !important;
+    max-width:280px !important;
+}
 </style>
 </head>
 
