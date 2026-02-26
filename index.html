@@ -1,1016 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="RtN7anokDkRgW7ouEeALFLu9zNfU-VwPHtua8tPO3Eo" />
-    <title>Python Automation Developer | Excel Automation Tools</title>
-
-<meta name="description" content="Python automation developer offering Excel automation, web scraping and custom workflow tools. Automate your work in minutes.">
-
-<meta name="keywords" content="python automation, excel automation python, data automation, web scraping developer, freelance python developer">
-
-<meta name="author" content="Sedin Sehic">
-
-<meta property="og:title" content="Python Automation Developer">
-<meta property="og:description" content="Custom Python automation tools, Excel automation and workflow automation services.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://a-sehic-dev.github.io/Excel-Data-Automation-Python/">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KT71BS9P17"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KT71BS9P17');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://a-sehic-dev.github.io/Excel-Data-Automation-Python/">
-<meta property="og:site_name" content="Sedin Sehic Automation">
-<meta name="twitter:card" content="summary_large_image">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:title" content="Python Automation Developer">
-<meta name="twitter:description" content="Custom Python automation, Excel tools and workflow automation services.">
-
-<style>
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-html, body {
-  max-width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-body {
-    min-height: 100vh;
-    background: linear-gradient(135deg,#0b4f6c,#00a8a8);
-    color:#fff;
-    width:100%;
-    overflow-x:hidden;
-}
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 80p 20px;
-}
-
-.hero h1 {
-  font-size: 56px;
-  font-weight: 800;
-  margin-bottom: 16px;
-}
-
-.hero h1 span {
-  color: #6fffe9;
-}
-
-.hero p {
-  max-width: 520px;
-  font-size: 18px;
-  opacity: 0.9;
-  margin-bottom: 32px;
-}
-
-.hero a {
-  display: inline-block;
-  padding: 14px 26px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #6fffe9, #3dd5f3);
-  color: #003049;
-  font-weight: 700;
-  text-decoration: none;
-  width: fit-content;
-}
-
-/* CARDS */
-.cards {
-    transform: translateY(-100px);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  margin-top:0px;
-  max-width: 900px;
-  justify-content:center;
-}
-
-.card {
-  background: rgba(255,255,255,0.12);
-  border-radius: 18px;
-  padding: 28px;
-  backdrop-filter: blur(12px);
-  animation: float 6s ease-in-out infinite;
-  transition: all 0.4s ease;
-  will-change: transform;
-}
-.tool-card:nth-child(2){
-    animation-delay: 1.5s;
-}
-
-.tool-card:nth-child(3){
-    animation-delay: 3s;
-}
-
-.card:nth-child(2) {
-  animation-delay: 1.5s;
-}
-
-.card:nth-child(3) {
-  animation-delay: 3s;
-}
-
-.card h3 {
-  margin-bottom: 12px;
-}
-
-.card p {
-  opacity: 0.85;
-  line-height: 1.5;
-}
-
-/* FLOAT ANIMATION */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
-  100% { transform: translateY(0); }
-}
-
-/* === BACKGROUND FLOATING SQUARES – SIGURNA VERZIJA === */
-
-.background-squares {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.background-squares span {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: rgba(255, 255, 255, 0.25);
-  bottom: -60px;
-  animation: floatUp 10s linear infinite;
-}
-
-/* POZICIJE */
-.background-squares span:nth-child(1) { left: 20%; animation-delay: 0s; }
-.background-squares span:nth-child(2) { left: 40%; animation-delay: 2s; }
-.background-squares span:nth-child(3) { left: 60%; animation-delay: 4s; }
-.background-squares span:nth-child(4) { left: 80%; animation-delay: 6s; }
-
-@keyframes floatUp {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-120vh);
-  }
-}
-
-/* SADRŽAJ IZNAD KVADRATA */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  width:100%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-/* === FADE UP ANIMATION (VIDLJIVO) === */
-.fade-up {
-  opacity: 0;
-  transform: translateY(0);
-  animation: fadeUp 1.6s ease-out forwards;
-  will-change: opacity;
-}
-
-.delay-1 { animation-delay: 0.5s; }
-.delay-2 { animation-delay: 1s; }
-.delay-3 { animation-delay: 1.5s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes gentleFloat {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-/* === CTA PREMIUM HOVER === */
-.hero-content a {
-  display: inline-block;
-  background: linear-gradient(135deg, #34f5c5, #22d3ee);
-  color: #022c22;
-  padding: 14px 26px;
-  border-radius: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.hero-content a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(34, 211, 238, 0.45);
-}
-/* === CARD HOVER PREMIUM === */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-12px)
-  scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25),
-  0 0 30px rgba(52,245,197,0.18);
-}
-/* === HOW IT WORKS SECTION === */
-.how-it-works {
-  padding: 60px 40px 120px;
-  margin-top: 0;
-  text-align: center;
-}
-
-.how-it-works h2 {
-  font-size: 42px;
-  margin-bottom: 70px;
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.step {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
-  border-radius: 20px;
-  padding: 40px 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.step:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-
-.step span {
-  display: inline-flex;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  background: #5eead4;
-  color: #022c22;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.step h3 {
-  margin-bottom: 12px;
-}
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 480px;
-  align-items: start;
-  gap: 80px;
-}
-/* READY BOX – DESNA STRANA */
-
-.ready-box {
-  width: 100%;
-  max-width: 420px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(14px);
-  border-radius: 22px;
-  padding: 32px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
-  margin-top: 200px
-}
-
-.ready-box h3 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-
-.ready-item {
-  margin-bottom: 24px;
-}
-
-.ready-item span {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.ready-item strong {
-  font-size: 22px;
-  display: block;
-  margin: 6px 0 10px;
-}
-
-.ready-box a {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 14px;
-  margin-top: 6px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #2dd4ee, #34f5c5);
-  color: #022c22;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.ready-links a {
-  margin-top: 10px;
-}
-.ai-panel{
-  margin-top:40px;
-  padding:20px;
-  border-radius:18px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  width:400px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.25);
-}
-
-.ai-line{
-  font-size:14px;
-  opacity:0.9;
-  margin-bottom:8px;
-}
-
-.ai-line.success{
-  color:#5df2c1;
-  font-weight:600;
-}
-.mini-explain{
-    position:relative;
-    z-index:5;
-    margin-top:22px;
-    max-width:420px;
-    padding:18px 22px;
-    border-radius:14px;
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(10px);
-    font-size:14px;
-    line-height:1.6;
-    color:#e9ffff;
-    box-shadow:0 10px 30px rgba(0,0,0,0.25);
-}
-
-@keyframes floatSoft{
-    0%{ transform: translateY(0px); }
-    50%{ transform: translateY(-6px); }
-    100%{ transform: translateY(0px); }
-}
-.tools-section{
-margin-top:80px;
-text-align:center;
-transform:translateX(80px);
-}
-
-.tools-grid{
-display:grid;
-grid-template-columns: repeat(2, 260px);
-justify-content:center;
-gap:30px;
-margin-top:30px;
-}
-
-.tool-card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-padding:24px;
-border-radius:14px;
-width:260px;
-color:#e9ffff;
-box-shadow:0 10px 30px rgba(0,0,0,0.25);
-transition:0.3s;
-}
-
-.tool-card:hover{
-transform:translateY(-5px);
-}
-.tool-card{
-    animation: floatSoft 6s ease-in-out infinite;
-}
-
-.tool-card:nth-child(2){
-    animation-delay:1.5s;
-}
-
-.tool-card:nth-child(3){
-    animation-delay:3s;
-}
-
-.ghost{
-    opacity:0.15;
-    backdrop-filter: blur(6px);
-}
-.featured{
-    border:1px solid rgba(93,242,193,0.4);
-    box-shadow:0 0 30px rgba(93,242,193,0.25);
-}
-
-.tool-buttons{
-    margin-top:12px;
-    display:flex;
-    gap:10px;
-}
-
-.tool-buttons a{
-    padding:8px 12px;
-    border-radius:8px;
-    background:rgba(255,255,255,0.12);
-    text-decoration:none;
-    color:#fff;
-    font-size:13px;
-}
-.tool-card{
-    transition: all 0.35s ease;
-}
-
-.tool-card:hover{
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-.tool-card{
-    transition: all 0.35s ease;
-}
-
-.tool-card:hover{
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-.featured:hover{
-    box-shadow:0 0 40px rgba(93,242,193,0.6);
-}
-.tool-card.featured{
-margin-left:35px;
-}
-.tool-card{
-    position:relative;
-    overflow:hidden;
-}
-
-/* NEW badge */
-.tool-card.new::before{
-    content:"NEW";
-    position:absolute;
-    top:14px;
-    right:-35px;
-    background:#5df2c1;
-    color:#0c1f23;
-    font-size:11px;
-    font-weight:700;
-    padding:6px 40px;
-    transform:rotate(45deg);
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* BESTSELLER badge */
-.tool-card.hot::before{
-    content:"BESTSELLER";
-    position:absolute;
-    top:14px;
-    right:-55px;
-    background:#ffd166;
-    color:#0c1f23;
-    font-size:11px;
-    font-weight:700;
-    padding:6px 60px;
-    transform:rotate(45deg);
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-.contact-section{
-    margin-top:80px;
-    text-align:center;
-}
-
-.contact-grid{
-    margin-top:30px;
-    display:flex;
-    justify-content:center;
-    gap:30px;
-}
-
-.contact-card{
-    background:rgba(255,255,255,0.08);
-    padding:24px;
-    border-radius:18px;
-    backdrop-filter:blur(10px);
-    width:260px;
-    animation:floatSoft 7s ease-in-out infinite;
-}
-.hero-fill{
-    position:absolute;
-    left:820px;
-    top:400px;
-    max-width:720px;
-}
-
-.fill-card{
-    background:rgba(255,255,255,0.08);
-    padding:32px 34px;
-    border-radius:20px;
-    backdrop-filter:blur(12px);
-    animation:floatSoft 6s ease-in-out infinite;
-}
-.fill-card:hover{
- transform:translateY(-6px);
- box-shadow:
- 0 30px 60px rgba(0,0,0,0.22),
- 0 0 40px rgba(52,245,197,0.22);
-}
-
-.fill-title{
-    font-weight:700;
-    margin-bottom:10px;
-}
-
-.fill-line{
-    font-size:14px;
-    opacity:0.85;
-    margin-bottom:6px;
-}
-.hero{
-    position:relative;
-}
-/* === ABOUT & CONTACT === */
-
-.about-contact{
-padding:100px 40px;
-text-align:center;
-}
-
-.about-box{
-max-width:700px;
-margin:0 auto 50px auto;
-background:rgba(255,255,255,0.06);
-backdrop-filter:blur(12px);
-border-radius:22px;
-padding:40px;
-box-shadow:0 20px 60px rgba(0,0,0,0.25);
-}
-
-.contact-grid{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.contact-card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
-padding:30px;
-border-radius:20px;
-width:260px;
-transition:transform .3s ease, box-shadow .3s ease;
-}
-
-.contact-card:hover{
-transform:translateY(-8px);
-box-shadow:
-0 30px 60px rgba(0,0,0,.22),
-0 0 40px rgba(52,245,197,.18);
-}
-
-.contact-btn{
- box-shadow:0 10px 25px rgba(0,0,0,0. 15);
- display:block;
- margin-top:12px;
- padding:14px;
- border-radius:12px;
- text-decoration:none;
- font-weight:600;
- transition: all.25s ease;
-
- width:100%;
- box-sizing:border-box;
- word-break:break-word;
-}
-.contact-btn.whatsapp:hover{
- transform:translateY(-4px);
- box-shadow:
- 0 20px 40px rgba(0,0,0,0.25),
- 0 0 35px rgba(37,211,102,0.45);
-}
-
-.contact-btn.viber:hover{
- transform:translateY(-4px);
- box-shadow:
- 0 20px 40px rgba(0,0,0,0.25),
- 0 0 35px rgba(115,96,242,0.45);
-}
-
-.contact-btn.mail:hover{
- transform:translateY(-4px);
- box-shadow:
- 0 20px 40px rgba(0,0,0,0.25),
- 0 0 35px rgba(52,245,197,0.45);
-}
-
-.contact-btn.whatsapp{
-background:#25D366;
-color:#022c22;
-}
-
-.contact-btn.viber{
-background:#7360F2;
-color:white;
-}
-
-.contact-btn.mail{
-background:linear-gradient(135deg,#34f5c5,#22d3ee);
-color:#022c22;
-}
-
-.contact-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 12px 30px rgba(34,211,238,.45);
-}
-.reveal{
-    opacity:0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-}
-
-.reveal.active{
-    opacity:1;
-    transform: translateY(0);
-}
-/* MOBILE FIX */
-@media (max-width:768px) {
-
-  html, body {
-    width: 100% important;
-    overflow-x: hidden !important;
-  }
-
- .hero-content{
-  position:static !important;
-  left:auto !important;
-  right:auto !important;
-  transform:none !important;
-  width:100% !important;
-  max-width:100% !important;
-  padding:0 14px !important;
-  box-sizing:border-box !important;
-}
-.hero{
-   flex-direction: column !important;
-   align-items: center !important;
-}
-.hero-right{
-    position: static !important;
-    transform: none !important;
-    left:auto !important;
-    right:auto !important;
-    width:100% !important;
-    margin-top:20px !important;
-    display:block !important;
-margin:20px auto !important;
-max-width:100% !important;
-}
-.live-status{
-   position:static !important;
-   right:auto !important;
-   left:auto !important;
-   margin:20px auto !important;
-   width:100% !important;
-   max-width:100% !important;
-}
-.reveal{
-   opacity:1 !important;
-   transform:none !important;
-}
-.tools-section h2{
-    text-align:center;
-    margin-left:auto;
-    margin-right:auto;
-    width:100%;
-}
-  .tools-section {
-    transform: none !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    max-width:400px !important;
-  }
-
-  .tools-grid {
-    display:flex !important;
-    justify-content:center !important;
-  }
-
-  .tool-card,
-  .card {
-    width: auto !important;
-    max-width: 320px !important;
-  }
-
-  .cards {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-
-  .background-squares {
-    display: none !important;
-  }
-  .hero h1{
-  font-size:34px !important;
-  line-height:1.2 !important;
-  padding:0 12px !important;
-}
-
-.hero p{
-  font-size:15px !important;
-  padding:0 12px !important;
-}
-.hero {
-    flex-direction: column !important;
-    align-items: center !important;
-}
-
-.hero {
-display:flex !important;
-flex-direction: column !important;
-align-items: center !important;
-grid-template-columns:none !important;
-gap:20px !important;
-}
-
-.hero{
-  padding:60px 12px !important;
-}
-
-}
-.hero-fill{
-    display:flex !important;
-    justify-content:center !important;
-}
-
-.fill-card{
-    width:100% !important;
-    max-width:320px !important;
-}
-
-.cta-btn{
-    width:100% !important;
-    max-width:280px !important;
-}
-
-</style>
+  <meta name="google-site-verification" content="RtN7anokDkRgW7ouEeALFLu9zNfU-VwPHtua8tPO3Eo" />
+  <title>Sedin | Python Automation Developer</title>
+  <meta name="description" content="Python Automation Developer specializing in Excel automation, web scraping, API integrations and custom workflow systems. Automate repetitive Excel tasks — get in touch.">
+  <meta name="keywords" content="python automation, excel automation, web scraping, automation developer, custom automation tools, web scraping to excel, automate repetitive excel tasks">
+  <meta name="author" content="Sedin Sehic">
+  <meta property="og:title" content="Sedin | Python Automation Developer">
+  <meta property="og:description" content="Python Automation Developer specializing in Excel automation, web scraping, API integrations and custom workflow systems. Automate repetitive tasks.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://a-sehic-dev.github.io/Excel-Data-Automation-Python/">
+  <meta property="og:site_name" content="Sedin Sehic · Python Automation">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sedin | Python Automation Developer">
+  <meta name="twitter:description" content="Python Automation Developer — Excel automation, web scraping, API integrations and custom workflow systems.">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KT71BS9P17"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KT71BS9P17');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://a-sehic-dev.github.io/Excel-Data-Automation-Python/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: #0b0f1a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 18px 24px;
+      background: rgba(11, 15, 26, 0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(12px);
+    }
+    .header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+    .logo span { color: #38bdf8; }
+    .logo-img { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
+    .header-nav { display: flex; gap: 8px; }
+    .header-nav a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 10px 18px;
+      border-radius: 10px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .header-nav a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+    .header-nav a:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
+
+    /* ——— HERO ——— */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 24px 100px;
+    }
+    .hero .badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2.25rem, 6vw, 3.75rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .hero .hero-tagline {
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      font-weight: 600;
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+    .hero .lead {
+      font-size: 1.15rem;
+      color: #94a3b8;
+      max-width: 560px;
+      margin-bottom: 40px;
+      line-height: 1.65;
+    }
+    .hero .cta-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .hero .cta {
+      display: inline-block;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .hero .cta-primary {
+      background: #38bdf8;
+      color: #0b0f1a;
+    }
+    .hero .cta-primary:hover {
+      background: #7dd3fc;
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(56, 189, 248, 0.35);
+    }
+    .hero .cta-secondary {
+      background: transparent;
+      color: #e2e8f0;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+    .hero .cta-secondary:hover { border-color: #38bdf8; color: #38bdf8; }
+    .hero .cta:focus-visible { outline: 2px solid #38bdf8; outline-offset: 3px; }
+
+    /* ——— SECTION COMMON ——— */
+    section.block { padding: 100px 0; }
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 48px;
+    }
+    .section-title.center { text-align: center; }
+
+    /* ——— ABOUT ——— */
+    .about-content { max-width: 680px; margin: 0 auto; }
+    .about-content p { margin-bottom: 20px; color: #94a3b8; line-height: 1.75; }
+    .about-content p:last-of-type { margin-bottom: 0; }
+    .about-content strong { color: #e2e8f0; }
+    .about-list {
+      list-style: none;
+      margin: 24px 0;
+      padding: 0;
+    }
+    .about-list li {
+      padding: 8px 0;
+      padding-left: 1.5em;
+      color: #94a3b8;
+      position: relative;
+    }
+    .about-list li::before { content: ''; position: absolute; left: 0; top: 1em; width: 6px; height: 6px; border-radius: 50%; background: #38bdf8; }
+    .about-pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+    .about-pill { padding: 10px 18px; background: rgba(56, 189, 248, 0.1); border-radius: 999px; font-size: 0.95rem; font-weight: 600; color: #38bdf8; }
+    .about-quote {
+      margin-top: 32px;
+      padding: 24px 28px;
+      border-left: 4px solid #38bdf8;
+      background: rgba(56, 189, 248, 0.06);
+      border-radius: 0 12px 12px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    /* ——— WHAT I BUILD (3 cols) ——— */
+    .build-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; }
+    .build-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .build-card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.2); }
+    .build-card h3 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .build-card p { font-size: 0.95rem; color: #94a3b8; line-height: 1.6; }
+
+    /* ——— PROJECTS DELIVERED ——— */
+    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .project-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 28px 26px;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .project-card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.2); }
+    .project-card h3 { font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .project-tagline { font-size: 0.95rem; color: #38bdf8; font-weight: 600; margin-bottom: 14px; line-height: 1.4; }
+    .project-full { font-size: 0.9rem; color: #94a3b8; line-height: 1.6; margin-bottom: 14px; }
+    .project-built-for { margin-bottom: 12px; }
+    .project-built-for .label { font-size: 0.8rem; font-weight: 600; color: #64748b; display: block; margin-bottom: 6px; }
+    .project-built-for ul { list-style: none; margin: 0; padding: 0; }
+    .project-built-for li { padding: 3px 0; color: #94a3b8; font-weight: 500; font-size: 0.85rem; }
+    .project-built-for li::before { content: '· '; color: #38bdf8; }
+
+    /* ——— RESULTS ——— */
+    .results-section { padding: 64px 24px; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .results-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px 56px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+
+    /* ——— SERVICES ——— */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 800px; margin: 0 auto; }
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 22px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      font-weight: 600;
+      color: #e2e8f0;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .service-item:hover { border-color: rgba(56, 189, 248, 0.2); background: rgba(56, 189, 248, 0.04); }
+    .service-item span:first-child { color: #38bdf8; font-size: 1.2rem; }
+
+    /* ——— FAQ ——— */
+    .faq-list { max-width: 640px; margin: 0 auto; }
+    .faq-item { padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 1.05rem; font-weight: 700; color: #fff; display: block; margin-bottom: 8px; }
+    .faq-a { font-size: 0.95rem; color: #94a3b8; line-height: 1.6; margin: 0; }
+
+    /* ——— CONTACT (zasebna sekcija na kraju) ——— */
+    #about, #services, #work, #projects, #faq, #contact { scroll-margin-top: 80px; }
+    .contact-section {
+      padding: 80px 24px 100px;
+      background: rgba(255,255,255,0.02);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .contact-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+    .contact-inner h2 { font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .contact-inner .contact-tagline { font-size: 1.1rem; color: #94a3b8; margin-bottom: 28px; }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 20px; }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .contact-btn:hover { opacity: 0.95; transform: translateY(-2px); }
+    .contact-btn:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
+    .contact-btn.whatsapp { background: #25D366; color: #0b0f1a; }
+    .contact-btn.viber { background: #7360F2; color: #fff; }
+    .contact-btn.mail { background: #38bdf8; color: #0b0f1a; }
+    .contact-emails { font-size: 0.9rem; color: #64748b; margin-bottom: 28px; }
+    .contact-emails a { color: #38bdf8; text-decoration: none; }
+    .contact-platforms { margin-top: 32px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .contact-platforms .label { font-size: 0.8rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 14px; }
+    .platform-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .platform-row a {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .platform-row a:hover { background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.3); color: #38bdf8; }
+
+    .footer {
+      padding: 28px 24px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer a { color: #38bdf8; text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .build-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .contact-row { flex-direction: column; align-items: center; }
+      .services-grid { grid-template-columns: 1fr; }
+      .results-row { flex-direction: column; align-items: center; gap: 20px; }
+      section.block { padding: 72px 0; }
+      .section-title { margin-bottom: 36px; }
+      .hero .cta-row { flex-direction: column; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 100px 20px 80px; }
+    }
+  </style>
 </head>
-
 <body>
-<div class="background-squares">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
 
-<section class="hero">
-    <div class="hero-content">
-
-  <h1 class="fade-up">
-    Stop wasting hours on Excel.<br>
-    <span>Automate Excel tasks with Python.</span>
-  </h1>
-
-  <p class="fade-up delay-1">
-    I turn messy Excel files into clean, automated workflows using Python —
-    so you get results in minutes, not hours.
-  </p>
-
-  <a href="mailto:sedinsehic12@hotmail.com?subject=Excel Automation Request" class="fade-up delay-2 cta-btn">
-Send your Excel file → Get it automated
-</a>
-
-  <p class="trust-line fade-up delay-3">
-    <div class="ai-panel fade-up delay-3">
-        <div class="mini-explain fade-up delay-4">
-  ⚡ Upload Excel → Python automation runs → Clean file ready in seconds.<br>
-  No manual work. No complicated setup. Just results.
-</div>
-  <div class="ai-line">✔ Excel file uploaded...</div>
-  <div class="ai-line">⚙ Cleaning columns...</div>
-  <div class="ai-line">🤖 Running Python automation...</div>
-  <div class="ai-line success">✓ Finished in 12 seconds</div>
-</div>
-<div class="trust-box">
-    <div class="trust-item">⚡ 1-click automation</div>
-    <div class="trust-item">🧠 Python powered</div>
-    <div class="trust-item">⭐ Used by freelancers</div>
-    <div class="trust-item">🚀 Instant results</div>
-</div>
-    ✓ Custom Python scripts · ✓ One-click automation · ✓ Fast turnaround
-  </p>
-<div class="hero-fill">
-   <div class="fill-card">
-      <div class="fill-title">Live Automation Status</div>div>
-      <div class="fill-line">❌ Messy Excel columns</div>
-      <div class="fill-line">❌ Duplicates & errors</div>
-      <div class="fill-line">✅ Clean structured data</div>
-      <div class="fill-line">✅ Ready for automation</div>
-      <div class="fill-line">⚡ Auto column cleanup</div>
-<div class="fill-line">📊 Structured Excel output</div>
-<div class="fill-line">🤖 Python automation ready</div>
-<div class="fill-line">🚀 Works in seconds</div>
-   </div>
-</div>
-</div>
-
-<section class="tools-section">
-<div class="tools-grid">
-<div class="tool-card featured hot">
-    <h3>⭐ Excel Cleaner PRO</h3>
-    <p>Clean messy Excel files automatically. Unlimited rows, instant automation.</p>
-
-    <div class="tool-buttons">
-    
-<a href="https://www.etsy.com/listing/4452885589/excel-cleaner-pro-remove-duplicates"
-class="tool-btn"
-target="_blank">
-⭐ Buy PRO on Etsy
-</a>
-
-<a href="https://freemanmarket.gumroad.com/l/yulgke"
-class="tool-btn"
-target="_blank"
-rel="noopener">
-⭐ Buy Pro on Gumroad
-</a>
-
-</div>
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo"><img src="assets/logo.png" alt="" class="logo-img" width="28" height="28">Sedin Sehic <span>· Automation</span></a>
+      <nav class="header-nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#projects">My projects</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-</div>
-<div class="tool-card">
-<h3>Coming soon</h3>
-<p>New automation tools will appear here.</p>
-</div>
-<div class="tool-card">
-<h3>💼 Fiverr Services</h3>
-<p>Order custom Python automation, scraping and AI tools.</p>
+  </header>
 
-<a href="https://www.fiverr.com/sedinsehic"
-target="_blank"
-rel="noopener"
-class="tool-btn">
-⭐ Hire me on Fiverr
-</a>
-</div>
-
-<div class="tool-card">
-<h3>🚀 Upwork Profile</h3>
-<p>Hire me for automation and workflow projects.</p>
-
-<a href="https://www.upwork.com/freelancers/~01a39a1afb770d16b7"
-target="_blank"
-rel="noopener"
-class="tool-btn">
-🔥 Hire me on Upwork
-</a>
-</div>
-<div class="tool-card ghost"></div>
-<div class="tool-card ghost"></div>
-</div>
-
-</section>
-</div>
-  <div class="cards reveal">
-    <div class="card">
-      <h3>Excel & CSV Automation</h3>
-      <p>Cleaning, merging, formatting and transforming Excel or CSV files using Python.</p>
+  <section class="hero">
+    <div class="container">
+      <p class="badge">Freelance Developer</p>
+      <h1>Sedin – Python Automation Developer</h1>
+      <p class="hero-tagline">I build systems that replace manual work.</p>
+      <p class="lead">Excel automation, web scraping to Excel, and custom workflow systems — I automate repetitive Excel tasks and data workflows with Python.</p>
+      <div class="cta-row">
+        <a href="#work" class="cta cta-secondary">View My Work</a>
+        <a href="#contact" class="cta cta-primary">Automate Your Workflow</a>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Web Scraping</h3>
-      <p>Extract structured data from websites, dashboards or internal tools.</p>
+  <section class="block" id="about">
+    <div class="container">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <p>My name is Sedin and I am a Python Automation Developer based in Bosnia and Herzegovina.</p>
+        <p>I'm a Python automation developer focused on building structured, scalable systems that eliminate repetitive manual work.</p>
+        <p>My background is rooted in data processing, Excel automation with Python, and workflow automation. I help businesses automate repetitive Excel tasks, do web scraping to Excel, and build custom systems. With over a year and a half of experience in structured data and business processes, I turn inefficient manual operations into reliable automated solutions.</p>
+        <p><strong>I work primarily with:</strong></p>
+        <ul class="about-list">
+          <li>Python (Pandas, Playwright, Selenium, API integrations)</li>
+          <li>Excel & CSV data processing</li>
+          <li>Web scraping & structured data extraction</li>
+          <li>Desktop automation tools (.exe applications)</li>
+          <li>Workflow automation systems</li>
+          <li>AI-assisted productivity tools</li>
+        </ul>
+        <p><strong>I design tools that are:</strong></p>
+        <div class="about-pill-row">
+          <span class="about-pill">Fast</span>
+          <span class="about-pill">Scalable</span>
+          <span class="about-pill">Secure</span>
+          <span class="about-pill">Built for real business use</span>
+        </div>
+        <p>I prefer structured written communication to ensure clarity, precision and reliable delivery.</p>
+        <p class="about-quote">Automation is not just about saving time.<br>It's about building systems that scale.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Custom Python Scripts</h3>
-      <p>One-click scripts that replace hours of repetitive manual work.</p>
+  <section class="block" id="work">
+    <div class="container">
+      <p class="section-label">What I Build</p>
+      <h2 class="section-title center">What I Build</h2>
+      <div class="build-grid">
+        <div class="build-card">
+          <h3>Excel & Data Automation</h3>
+          <p>Cleaning, merging, restructuring and reporting automation using Python.</p>
+        </div>
+        <div class="build-card">
+          <h3>Web Scraping & Data Extraction</h3>
+          <p>Structured data from websites, dashboards and internal systems.</p>
+        </div>
+        <div class="build-card">
+          <h3>Custom Automation Tools</h3>
+          <p>Standalone Python tools and desktop applications built for specific workflows.</p>
+        </div>
+        <div class="build-card">
+          <h3>Binance / Crypto Automation</h3>
+          <p>Custom tools using official APIs for data extraction, reporting and automation. No financial advice — only technical systems.</p>
+        </div>
+        <div class="build-card">
+          <h3>Backend & Frontend</h3>
+          <p>Backend automation in Python (APIs, data, scraping). Simple frontends or dashboards when the project needs them.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-<section class="how-it-works">
+  </section>
 
-  <h2 class="fade-up">How it works</h2>
-
-  <div class="steps">
-
-    <div class="step fade-up delay-1">
-      <span>1</span>
-      <h3>Send your Excel file</h3>
-      <p>Upload your file and explain what you want to automate.</p>
+  <section class="block" id="projects">
+    <div class="container">
+      <p class="section-label">Completed work</p>
+      <h2 class="section-title center">Projects I've Delivered</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>⭐ Excel Cleaner PRO</h3>
+          <p class="project-tagline">Clean, restructure and normalize messy Excel files in seconds. Built for large datasets and real business workflows.</p>
+          <p class="project-full">Excel Cleaner PRO is a structured automation tool designed to clean, normalize and prepare messy Excel or CSV files in seconds. It automatically removes duplicates, fixes inconsistent formatting, restructures columns and prepares data for reporting or further processing. Instead of manually filtering rows, correcting formulas or fixing broken formats, the tool applies consistent logic across the entire dataset — regardless of file size. This tool replaces hours of repetitive manual cleanup with a single automated workflow.</p>
+          <div class="project-built-for">
+            <span class="label">Built for:</span>
+            <ul>
+              <li>Business reports</li>
+              <li>Data preparation</li>
+              <li>CRM exports</li>
+              <li>Financial spreadsheets</li>
+              <li>Bulk file processing</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>🧠 GUI Automation App (Custom Desktop Tool)</h3>
+          <p class="project-tagline">Custom-built desktop automation tools delivered as standalone .exe applications — no setup required.</p>
+          <p class="project-full">The GUI Automation Tool is a custom-built desktop application designed to automate repetitive business workflows without requiring Python installation. It provides a clean user interface while executing structured automation logic in the background. The tool is delivered as a standalone executable (.exe), allowing clients to run automation processes easily without technical setup. Designed for reliability, speed and repeatability.</p>
+          <div class="project-built-for">
+            <span class="label">Typical use cases:</span>
+            <ul>
+              <li>Bulk data processing</li>
+              <li>Multi-file merging</li>
+              <li>Report generation</li>
+              <li>Data validation</li>
+              <li>Workflow execution</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>🚀 BidFlow AI (Freelancer Toolkit)</h3>
+          <p class="project-tagline">AI-powered freelancer toolkit for proposals, CV optimization and job workflow automation.</p>
+          <p class="project-full">BidFlow AI is a productivity tool designed to help freelancers and job seekers optimize proposals, applications and workflow communication. It includes proposal generation, CV rewriting, scam detection, interview preparation and AI-assisted messaging. The system is structured with controlled token usage, a credit-based model and performance-focused architecture to ensure cost efficiency and scalability. BidFlow AI is built as a practical tool — not generic AI text generation — but workflow-optimized output for real job platforms like Upwork and Fiverr.</p>
+          <div class="project-built-for">
+            <span class="label">Includes:</span>
+            <ul>
+              <li>Proposal generation</li>
+              <li>CV rewriting</li>
+              <li>Scam detection</li>
+              <li>Interview preparation</li>
+              <li>AI-assisted messaging</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>🌐 Web Scraping & Data Extraction Systems</h3>
+          <p class="project-tagline">Custom scraping systems that deliver clean, usable data — Excel, CSV, JSON. Built for scalability and reliability.</p>
+          <p class="project-full">Custom web scraping systems designed to extract structured data from websites, dashboards and protected environments. Built using Python automation frameworks such as Playwright and Selenium, these systems handle pagination, dynamic content, login-based platforms and structured output (Excel, CSV, JSON). The focus is not just extraction — but delivering clean, usable data ready for reporting or automation. Designed for scalability and reliability.</p>
+          <div class="project-built-for">
+            <span class="label">Handles:</span>
+            <ul>
+              <li>Pagination</li>
+              <li>Dynamic content</li>
+              <li>Login-based platforms</li>
+              <li>Structured output (Excel, CSV, JSON)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="step fade-up delay-2">
-      <span>2</span>
-      <h3>I build the automation</h3>
-      <p>I create a custom Python script tailored to your workflow.</p>
+  <section class="results-section">
+    <div class="container">
+      <div class="results-row">
+        <span>⚡ 400+ Companies Scraped</span>
+        <span>📊 10,000+ Rows Processed</span>
+        <span>🛠 Custom Tools Built</span>
+        <span>⏱ 90% Time Saved</span>
+      </div>
     </div>
+  </section>
 
-    <div class="step fade-up delay-3">
-      <span>3</span>
-      <h3>Get instant results</h3>
-      <p>You receive a ready-to-use automated solution — no manual work.</p>
+  <section class="block" id="services">
+    <div class="container">
+      <p class="section-label">Services</p>
+      <h2 class="section-title center">Services</h2>
+      <div class="services-grid">
+        <div class="service-item"><span>⚙</span> Workflow Automation</div>
+        <div class="service-item"><span>📊</span> Excel Processing</div>
+        <div class="service-item"><span>🧹</span> Data Cleaning</div>
+        <div class="service-item"><span>🕷</span> Scraping</div>
+        <div class="service-item"><span>🔌</span> API Integration</div>
+        <div class="service-item"><span>🖥</span> Desktop Tool Development</div>
+      </div>
     </div>
+  </section>
 
-  </div>
-<section class="about-contact">
+  <section class="block" id="faq">
+    <div class="container">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title center">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <span class="faq-q">Is my data secure?</span>
+          <p class="faq-a">Yes. Files are handled privately and never shared.</p>
+        </div>
+        <div class="faq-item">
+          <span class="faq-q">Do you use VBA or Python?</span>
+          <p class="faq-a">I primarily use Python because it is more scalable, maintainable and suitable for complex workflows.</p>
+        </div>
+        <div class="faq-item">
+          <span class="faq-q">Can you build a desktop tool (.exe)?</span>
+          <p class="faq-a">Yes. I can deliver standalone tools that run without needing Python installed.</p>
+        </div>
+        <div class="faq-item">
+          <span class="faq-q">How do we communicate?</span>
+          <p class="faq-a">I prefer written communication (email, WhatsApp, Viber) for clarity and to keep everything documented.</p>
+        </div>
+        <div class="faq-item">
+          <span class="faq-q">Do you build frontend or backend systems?</span>
+          <p class="faq-a">I specialize in backend automation using Python (APIs, data processing, scraping, workflows). I can also build simple frontends or dashboards when needed.</p>
+        </div>
+        <div class="faq-item">
+          <span class="faq-q">Do you build Binance automation tools?</span>
+          <p class="faq-a">Yes. I build custom tools using official APIs for data extraction, reporting and automation. No financial advice — only technical systems.</p>
+        </div>
+        <div class="faq-item">
+          <span class="faq-q">Do you integrate external APIs?</span>
+          <p class="faq-a">Yes. I build automation systems that connect with third-party APIs for data syncing, reporting and workflow automation.</p>
+        </div>
+        <div class="faq-item">
+          <span class="faq-q">Can you build scalable automation systems or SaaS tools?</span>
+          <p class="faq-a">Yes. I design structured, scalable Python systems with clean architecture, optimized for performance and long-term use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="about-box fade-up">
-<h2>About & Contact</h2>
-<p>
-I build custom Python automation tools that save hours of manual work.
-Focused on Excel automation, web scraping and one-click workflows.
-Fast communication and simple solutions — no overcomplicated setups.
-</p>
-</div>
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <h2>Have a repetitive process?</h2>
+        <p class="contact-tagline">Let's automate it.</p>
+        <div class="contact-row">
+          <a href="https://wa.me/38760410565?text=Hello%2C%20I%20have%20a%20repetitive%20process%20I%20would%20like%20to%20automate." class="contact-btn whatsapp" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a href="viber://chat?number=%2B387644152799&text=Hello%2C%20I%20would%20like%20to%20automate%20a%20workflow." class="contact-btn viber" target="_blank" rel="noopener">📱 Viber</a>
+          <a href="mailto:sedinsehic81@gmail.com?subject=Automation%20Request&body=Hello%2C%20I%20have%20a%20repetitive%20process%20I%20would%20like%20to%20automate.%0A%0ABrief%20description%3A" class="contact-btn mail">📩 Email</a>
+        </div>
+        <p class="contact-emails">sedinsehic81@gmail.com · sedinsehic12@hotmail.com</p>
+        <div class="contact-platforms">
+          <span class="label">Find me on</span>
+          <div class="platform-row">
+            <a href="https://www.fiverr.com/sedinsehic" target="_blank" rel="noopener">Fiverr</a>
+            <a href="https://www.upwork.com/freelancers/~01a39a1afb770d16b7" target="_blank" rel="noopener">Upwork</a>
+            <a href="https://www.linkedin.com/in/sedin-sehic-1134253a8/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://freemanmarket.gumroad.com/l/yulgke" target="_blank" rel="noopener">Gumroad</a>
+            <a href="https://www.etsy.com/listing/4452885589/excel-cleaner-pro-remove-duplicates" target="_blank" rel="noopener">Etsy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="contact-grid">
+  <footer class="footer">
+    <div class="container">
+      <p>© Sedin Sehic · Python Automation Developer · <a href="mailto:sedinsehic81@gmail.com">sedinsehic81@gmail.com</a></p>
+    </div>
+  </footer>
 
-<div class="contact-card">
-<h3>🇧🇦 Bosnia & Balkans</h3>
-
-<a href="https://wa.me/38760410565?text=Hello%20I%20am%20interested%20in%20your%20automation"
-target="_blank"
-class="contact-btn whatsapp">
-💬 WhatsApp
-</a>
-
-<a href="viber://chat?number=%2B387644152799&text=Hello%20I%20am%20interested%20in%20your%20automation"
-target="_blank"
-class="contact-btn viber">
-📱 Viber
-</a>
-</div>
-
-
-<div class="contact-card">
-<h3>🌍 Worldwide</h3>
-
-<a href="mailto:sedinsehic81@gmail.com?subject=Automation%20Request&body=Hello%20I%20am%20interested%20in%20your%20automation"
-target="_blank"
-class="contact-btn mail">
-📩 sedinsehic81@gmail.com
-</a>
-<a href="mailto:sedinsehic12@hotmail.com?subject=Automation%20Request&body=
-Hello%20I%20am%20interested%20in%20your%20automation"
-target="_blank"
-class="contact-btn mail">
-📩 sedinsehic12@hotmail.com
-</a>
-
-</div>
-
-</div>
-
-</section>
-</section>
-<script>
-window.addEventListener("scroll", function(){
-    const reveals = document.querySelectorAll(".reveal");
-
-    reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-
-        if(elementTop < windowHeight - 80){
-            el.classList.add("active");
-        }
-    });
-});
-</script>
 </body>
 </html>
