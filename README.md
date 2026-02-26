@@ -20,3 +20,8 @@ This Python tool automates Excel data cleaning, formatting, and processing tasks
 
 ## Customization
 I already built
+# Sedin · Python Automation Developer
+
+Landing page for Sedin Sehic — Python Automation Developer (Excel, web scraping, API integrations, custom workflow systems).
+
+**Official Website:** https://a-sehic-dev.github.io/Excel-Data-Automation-Python/
