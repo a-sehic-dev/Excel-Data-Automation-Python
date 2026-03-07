@@ -106,8 +106,11 @@
       font-size: 1.15rem;
       color: #94a3b8;
       max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 40px;
       line-height: 1.65;
+      text-align: center;
     }
     .hero .cta-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
     .hero .cta {
@@ -319,6 +322,19 @@
       .section-title { margin-bottom: 36px; }
       .hero .cta-row { flex-direction: column; }
     }
+    /* Header & nav na mobilnom – svi linkovi vidljivi */
+    @media (max-width: 768px) {
+      .header .container { flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .header .logo { flex: 1 1 auto; min-width: 0; }
+      .header-nav {
+        flex: 1 1 100%;
+        order: 2;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .header-nav a { padding: 8px 12px; font-size: 0.85rem; }
+    }
     @media (max-width: 600px) {
       .hero { padding: 100px 20px 80px; }
     }
@@ -342,10 +358,10 @@
 
   <section class="hero">
     <div class="container">
-      <p class="badge">Freelance Developer</p>
+      <p class="badge">Python Automation Engineer</p>
       <h1>Sedin – Python Automation Developer</h1>
       <p class="hero-tagline">I build systems that replace manual work.</p>
-      <p class="lead">Excel automation, web scraping to Excel, and custom workflow systems — I automate repetitive Excel tasks and data workflows with Python.</p>
+      <p class="lead">Automation tools, backend APIs, web scraping systems and lightweight web interfaces that turn manual data workflows into automated processes.</p>
       <div class="cta-row">
         <a href="#work" class="cta cta-secondary">View My Work</a>
         <a href="#contact" class="cta cta-primary">Automate Your Workflow</a>
@@ -564,8 +580,8 @@
             <a href="https://www.fiverr.com/sedinsehic" target="_blank" rel="noopener">Fiverr</a>
             <a href="https://www.upwork.com/freelancers/~01a39a1afb770d16b7" target="_blank" rel="noopener">Upwork</a>
             <a href="https://www.linkedin.com/in/sedin-sehic-1134253a8/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://freemanmarket.gumroad.com/l/yulgke" target="_blank" rel="noopener">Gumroad</a>
-            <a href="https://www.etsy.com/listing/4452885589/excel-cleaner-pro-remove-duplicates" target="_blank" rel="noopener">Etsy</a>
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.freelancer.com/dashboard" target="_blank" rel="noopener">Freelancer</a>
           </div>
         </div>
       </div>
