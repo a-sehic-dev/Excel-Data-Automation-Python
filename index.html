@@ -34,12 +34,38 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      background: #0b0f1a;
+      background: #0f172a;
       color: #e2e8f0;
       min-height: 100vh;
       overflow-x: hidden;
       line-height: 1.6;
       font-size: 1rem;
+      position: relative;
+    }
+    /* Pozadinska galerija ispod svega – slike se mijenjaju */
+    .bg-slideshow {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .bg-slideshow-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.78) 100%);
+      z-index: 1;
+    }
+    .bg-slideshow img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+    .bg-slideshow img.active {
+      opacity: 0.55;
     }
     .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
     .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
@@ -49,9 +75,9 @@
       top: 0; left: 0; right: 0;
       z-index: 100;
       padding: 18px 24px;
-      background: rgba(11, 15, 26, 0.92);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      backdrop-filter: blur(12px);
+      background: rgba(15, 23, 42, 0.96);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(14px);
     }
     .header .container { display: flex; justify-content: space-between; align-items: center; }
     .logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
@@ -69,6 +95,66 @@
     }
     .header-nav a:hover { color: #fff; background: rgba(255,255,255,0.06); }
     .header-nav a:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
+
+    /* ——— Horizontalna traka ispod headera (tekst o uslugama) ——— */
+    .top-strip {
+      position: fixed;
+      top: 58px;
+      left: 0;
+      right: 0;
+      height: 42px;
+      z-index: 99;
+      background: linear-gradient(90deg, rgba(15, 23, 42, 0.97) 0%, rgba(30, 41, 59, 0.95) 50%, rgba(15, 23, 42, 0.97) 100%);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .top-strip-track {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+    }
+    .top-strip-text-wrap {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      animation: stripScroll 45s linear infinite;
+    }
+    .top-strip.paused .top-strip-text-wrap {
+      animation-play-state: paused;
+    }
+    .top-strip-text {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      padding: 0 2px;
+    }
+    .top-strip-text strong { color: #38bdf8; }
+    .top-strip-hint {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.7rem;
+      color: #64748b;
+      white-space: nowrap;
+      pointer-events: none;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 4px 8px;
+      border-radius: 6px;
+      z-index: 2;
+    }
+    .top-strip.paused .top-strip-hint { color: #38bdf8; }
+    @keyframes stripScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
     /* ——— HERO ——— */
     .hero {
@@ -192,11 +278,12 @@
     /* ——— WHAT I BUILD (3 cols) ——— */
     .build-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; }
     .build-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 16px;
       padding: 32px 28px;
       transition: transform 0.25s, border-color 0.25s;
+      backdrop-filter: blur(8px);
     }
     .build-card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.2); }
     .build-card h3 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
@@ -205,11 +292,12 @@
     /* ——— PROJECTS DELIVERED ——— */
     .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
     .project-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 16px;
       padding: 28px 26px;
       transition: transform 0.25s, border-color 0.25s;
+      backdrop-filter: blur(8px);
     }
     .project-card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.2); }
     .project-card h3 { font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
@@ -222,7 +310,13 @@
     .project-built-for li::before { content: '· '; color: #38bdf8; }
 
     /* ——— RESULTS ——— */
-    .results-section { padding: 64px 24px; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .results-section {
+      padding: 64px 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+    }
     .results-row {
       display: flex;
       flex-wrap: wrap;
@@ -240,9 +334,10 @@
       align-items: center;
       gap: 14px;
       padding: 18px 22px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 12px;
+      backdrop-filter: blur(8px);
       font-weight: 600;
       color: #e2e8f0;
       transition: border-color 0.2s, background 0.2s;
@@ -252,7 +347,13 @@
 
     /* ——— FAQ ——— */
     .faq-list { max-width: 640px; margin: 0 auto; }
-    .faq-item { padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .faq-item {
+      padding: 24px 20px;
+      border-radius: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(6px);
+    }
     .faq-item:last-child { border-bottom: none; }
     .faq-q { font-size: 1.05rem; font-weight: 700; color: #fff; display: block; margin-bottom: 8px; }
     .faq-a { font-size: 0.95rem; color: #94a3b8; line-height: 1.6; margin: 0; }
@@ -261,8 +362,9 @@
     #about, #services, #work, #projects, #faq, #contact { scroll-margin-top: 80px; }
     .contact-section {
       padding: 80px 24px 100px;
-      background: rgba(255,255,255,0.02);
-      border-top: 1px solid rgba(255,255,255,0.06);
+      background: rgba(15, 23, 42, 0.88);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
     }
     .contact-inner { max-width: 560px; margin: 0 auto; text-align: center; }
     .contact-inner h2 { font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
@@ -308,7 +410,9 @@
       text-align: center;
       font-size: 0.9rem;
       color: #64748b;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(8px);
     }
     .footer a { color: #38bdf8; text-decoration: none; }
 
@@ -338,9 +442,27 @@
     @media (max-width: 600px) {
       .hero { padding: 100px 20px 80px; }
     }
+    @media (max-width: 768px) {
+      .top-strip { display: none; }
+    }
+    main, .header { position: relative; z-index: 1; }
   </style>
 </head>
 <body>
+
+  <div class="bg-slideshow" aria-hidden="true">
+    <div class="bg-slideshow-overlay"></div>
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200" alt="">
+  </div>
 
   <header class="header">
     <div class="container">
@@ -356,6 +478,17 @@
     </div>
   </header>
 
+  <div class="top-strip" id="top-strip" role="marquee" aria-label="Services ticker — click to pause">
+    <div class="top-strip-track">
+      <div class="top-strip-text-wrap">
+        <span class="top-strip-text"><strong>What we do:</strong> Python automation · Excel &amp; data processing · Web scraping to Excel · Backend APIs · Custom workflow systems · Desktop tools (.exe) · API integrations · Binance &amp; crypto data tools · We automate repetitive tasks and build systems that scale · <strong>Contact us for a quote</strong> · </span>
+        <span class="top-strip-text"><strong>What we do:</strong> Python automation · Excel &amp; data processing · Web scraping to Excel · Backend APIs · Custom workflow systems · Desktop tools (.exe) · API integrations · Binance &amp; crypto data tools · We automate repetitive tasks and build systems that scale · <strong>Contact us for a quote</strong> · </span>
+      </div>
+    </div>
+    <span class="top-strip-hint" id="strip-hint">Click to pause · Klikni za pauzu</span>
+  </div>
+
+  <main>
   <section class="hero">
     <div class="container">
       <p class="badge">Python Automation Engineer</p>
@@ -593,6 +726,29 @@
       <p>© Sedin Sehic · Python Automation Developer · <a href="mailto:sedinsehic81@gmail.com">sedinsehic81@gmail.com</a></p>
     </div>
   </footer>
+  </main>
 
+  <script>
+    (function() {
+      var slides = document.querySelectorAll('.bg-slideshow img');
+      if (!slides.length) return;
+      var i = 0;
+      slides[0].classList.add('active');
+      setInterval(function() {
+        slides[i].classList.remove('active');
+        i = (i + 1) % slides.length;
+        slides[i].classList.add('active');
+      }, 4500);
+    })();
+    (function() {
+      var strip = document.getElementById('top-strip');
+      var hint = document.getElementById('strip-hint');
+      if (!strip || !hint) return;
+      strip.addEventListener('click', function() {
+        strip.classList.toggle('paused');
+        hint.textContent = strip.classList.contains('paused') ? 'Click to resume · Klikni za nastavak' : 'Click to pause · Klikni za pauzu';
+      });
+    })();
+  </script>
 </body>
 </html>
