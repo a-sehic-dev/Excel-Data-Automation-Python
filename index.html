@@ -75,11 +75,48 @@
       top: 0; left: 0; right: 0;
       z-index: 100;
       padding: 18px 24px;
-      background: rgba(15, 23, 42, 0.96);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(90deg,
+        rgba(15, 23, 42, 0.98) 0%,
+        rgba(22, 33, 52, 0.97) 25%,
+        rgba(30, 45, 65, 0.97) 50%,
+        rgba(22, 33, 52, 0.97) 75%,
+        rgba(15, 23, 42, 0.98) 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       backdrop-filter: blur(14px);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.2);
     }
-    .header .container { display: flex; justify-content: space-between; align-items: center; }
+    .header::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(56, 189, 248, 0.15) 15%,
+        rgba(56, 189, 248, 0.5) 50%,
+        rgba(56, 189, 248, 0.15) 85%,
+        transparent 100%);
+      pointer-events: none;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 80px,
+        rgba(56, 189, 248, 0.02) 80px,
+        rgba(56, 189, 248, 0.02) 81px
+      );
+      pointer-events: none;
+    }
+    .header .container { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; }
     .logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.03em; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
     .logo span { color: #38bdf8; }
     .logo-img { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
@@ -98,11 +135,10 @@
 
     /* ——— Horizontalna traka ispod headera (tekst o uslugama) ——— */
     .top-strip {
-      position: fixed;
-      top: 58px;
-      left: 0;
-      right: 0;
+      position: relative;
+      width: 100%;
       height: 42px;
+      margin-top: 58px;
       z-index: 99;
       background: linear-gradient(90deg, rgba(15, 23, 42, 0.97) 0%, rgba(30, 41, 59, 0.95) 50%, rgba(15, 23, 42, 0.97) 100%);
       border-bottom: 1px solid rgba(56, 189, 248, 0.2);
@@ -308,6 +344,16 @@
     .project-built-for ul { list-style: none; margin: 0; padding: 0; }
     .project-built-for li { padding: 3px 0; color: #94a3b8; font-weight: 500; font-size: 0.85rem; }
     .project-built-for li::before { content: '· '; color: #38bdf8; }
+    .projects-github-cta {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 1rem;
+      color: #94a3b8;
+    }
+    .projects-github-cta a { color: #38bdf8; text-decoration: none; font-weight: 600; }
+    .projects-github-cta a:hover { text-decoration: underline; }
 
     /* ——— RESULTS ——— */
     .results-section {
@@ -625,7 +671,68 @@
             </ul>
           </div>
         </div>
+        <div class="project-card">
+          <h3>🔌 Web Scraper API</h3>
+          <p class="project-tagline">Automated Data Extraction — Python-based scraping system that collects structured data and exposes it through an API.</p>
+          <p class="project-full">Web Scraper API is a Python-based scraping system that collects structured data from websites and exposes it through an API. The tool processes large datasets and formats them into clean JSON or CSV outputs for easy integration with other systems.</p>
+          <div class="project-built-for">
+            <span class="label">Key features:</span>
+            <ul>
+              <li>Automated web data extraction</li>
+              <li>API endpoints for structured data access</li>
+              <li>JSON / CSV export</li>
+              <li>Built with Python and FastAPI</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>📍 Local Business Leads Scraper</h3>
+          <p class="project-tagline">Automated Lead Generation — Collects local business information and structures it into organized datasets.</p>
+          <p class="project-full">Local Business Leads Scraper is a Python automation tool designed to collect local business information from online sources and structure it into organized datasets. The tool generates ready-to-use lead lists for outreach, research, and business development.</p>
+          <div class="project-built-for">
+            <span class="label">Key features:</span>
+            <ul>
+              <li>Automated business data collection</li>
+              <li>Lead generation datasets</li>
+              <li>Excel / CSV export</li>
+              <li>Data cleaning and structuring</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>🤖 Python Automation Agent</h3>
+          <p class="project-tagline">Workflow Automation System — Processes spreadsheet rows and performs automated data lookups.</p>
+          <p class="project-full">Python Automation Agent is an automation workflow tool that processes spreadsheet rows and performs automated data lookups. The system reads input datasets, runs search queries, and fills structured results automatically.</p>
+          <div class="project-built-for">
+            <span class="label">Key features:</span>
+            <ul>
+              <li>Spreadsheet-driven automation</li>
+              <li>Automated search and data collection</li>
+              <li>Workflow processing engine</li>
+              <li>Python automation pipelines</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>📊 Binance Spot Grid Trading Bot</h3>
+          <p class="project-tagline">Automated Crypto Trading System — Grid trading strategies on Binance Spot markets.</p>
+          <p class="project-full">A Python-based automated trading bot designed to execute grid trading strategies on Binance Spot markets. The system continuously monitors price movements and automatically places buy and sell orders based on predefined grid levels.</p>
+          <div class="project-built-for">
+            <span class="label">Key features:</span>
+            <ul>
+              <li>Automated grid trading strategy</li>
+              <li>Real-time market monitoring</li>
+              <li>Dynamic order placement</li>
+              <li>Telegram notifications for trades and alerts</li>
+              <li>Risk management and configurable trading parameters</li>
+            </ul>
+          </div>
+          <p class="project-full" style="margin-top: 10px;"><span class="label">Technology:</span> Python, Binance API, automation scripts, real-time market data processing.</p>
+        </div>
       </div>
+      <p class="projects-github-cta">
+        You can explore more of my automation, scraping, and data projects on my <a href="https://github.com/a-sehic-dev" target="_blank" rel="noopener">GitHub profile</a>.
+      </p>
     </div>
   </section>
 
